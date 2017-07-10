@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		773B21FF1F0D98EB000E299D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B21FE1F0D98EB000E299D /* AppDelegate.swift */; };
-		773B22011F0D9AFB000E299D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B22001F0D9AFB000E299D /* BookViewController.swift */; };
+		773B22231F0EDBCB000E299D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B22221F0EDBCB000E299D /* AppDelegate.swift */; };
+		773B22251F0EDBDB000E299D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B22241F0EDBDB000E299D /* BookViewController.swift */; };
+		773B22291F0EDD6F000E299D /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B22281F0EDD6F000E299D /* Chapter.swift */; };
+		773B222B1F0EDE02000E299D /* ChapterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B222A1F0EDE02000E299D /* ChapterGroup.swift */; };
 		7797889419A8273100CCA8DE /* ACChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797889319A8273100CCA8DE /* ACChapterViewController.m */; };
 		77A2454719A721A400E977D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2454619A721A400E977D8 /* Foundation.framework */; };
 		77A2454919A721A400E977D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2454819A721A400E977D8 /* CoreGraphics.framework */; };
@@ -16,7 +18,6 @@
 		77A2455119A721A400E977D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A2454F19A721A400E977D8 /* InfoPlist.strings */; };
 		77A2455A19A721A400E977D8 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A2455819A721A400E977D8 /* Main_iPhone.storyboard */; };
 		77A2455D19A721A400E977D8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A2455B19A721A400E977D8 /* Main_iPad.storyboard */; };
-		77A2456019A721A400E977D8 /* ACBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A2455F19A721A400E977D8 /* ACBookViewController.m */; };
 		77A2456319A721A400E977D8 /* ACPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A2456219A721A400E977D8 /* ACPlayerViewController.m */; };
 		77A2456519A721A400E977D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A2456419A721A400E977D8 /* Images.xcassets */; };
 		77A2456C19A721A500E977D8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2456B19A721A500E977D8 /* XCTest.framework */; };
@@ -27,9 +28,7 @@
 		77A2458319A7273400E977D8 /* ACPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A2458219A7273400E977D8 /* ACPartViewController.m */; };
 		77A2458519A7313B00E977D8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2458419A7313B00E977D8 /* MediaPlayer.framework */; };
 		77A2458719A731DF00E977D8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2458619A731DF00E977D8 /* AVFoundation.framework */; };
-		77A2458A19A7324400E977D8 /* ACChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A2458919A7324400E977D8 /* ACChapter.m */; };
 		77A2458C19A7329300E977D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2458B19A7329300E977D8 /* CoreMedia.framework */; };
-		77A2458F19A73B4800E977D8 /* ACChapterGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A2458E19A73B4800E977D8 /* ACChapterGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		773B21FE1F0D98EB000E299D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		773B22001F0D9AFB000E299D /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		773B22221F0EDBCB000E299D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = src/AppDelegate.swift; sourceTree = "<group>"; };
+		773B22241F0EDBDB000E299D /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookViewController.swift; path = src/ui/BookViewController.swift; sourceTree = "<group>"; };
+		773B22281F0EDD6F000E299D /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chapter.swift; path = src/model/Chapter.swift; sourceTree = "<group>"; };
+		773B222A1F0EDE02000E299D /* ChapterGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChapterGroup.swift; path = src/model/ChapterGroup.swift; sourceTree = "<group>"; };
 		7797889219A8273100CCA8DE /* ACChapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACChapterViewController.h; sourceTree = "<group>"; };
 		7797889319A8273100CCA8DE /* ACChapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACChapterViewController.m; sourceTree = "<group>"; };
 		77A2454319A721A400E977D8 /* Aurical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aurical.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,8 +56,6 @@
 		77A2455019A721A400E977D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77A2455919A721A400E977D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		77A2455C19A721A400E977D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		77A2455E19A721A400E977D8 /* ACBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACBookViewController.h; sourceTree = "<group>"; };
-		77A2455F19A721A400E977D8 /* ACBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACBookViewController.m; sourceTree = "<group>"; };
 		77A2456119A721A400E977D8 /* ACPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPlayerViewController.h; sourceTree = "<group>"; };
 		77A2456219A721A400E977D8 /* ACPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPlayerViewController.m; sourceTree = "<group>"; };
 		77A2456419A721A400E977D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -69,11 +68,7 @@
 		77A2458219A7273400E977D8 /* ACPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPartViewController.m; sourceTree = "<group>"; };
 		77A2458419A7313B00E977D8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		77A2458619A731DF00E977D8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		77A2458819A7324400E977D8 /* ACChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACChapter.h; sourceTree = "<group>"; };
-		77A2458919A7324400E977D8 /* ACChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACChapter.m; sourceTree = "<group>"; };
 		77A2458B19A7329300E977D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		77A2458D19A73B4800E977D8 /* ACChapterGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACChapterGroup.h; sourceTree = "<group>"; };
-		77A2458E19A73B4800E977D8 /* ACChapterGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACChapterGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		773B22261F0EDD46000E299D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				773B22271F0EDD4F000E299D /* model */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		773B22271F0EDD4F000E299D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				773B22281F0EDD6F000E299D /* Chapter.swift */,
+				773B222A1F0EDE02000E299D /* ChapterGroup.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		77A2453A19A721A400E977D8 = {
 			isa = PBXGroup;
 			children = (
@@ -139,22 +151,17 @@
 		77A2454C19A721A400E977D8 /* Aurical */ = {
 			isa = PBXGroup;
 			children = (
-				773B21FE1F0D98EB000E299D /* AppDelegate.swift */,
+				773B22261F0EDD46000E299D /* src */,
+				773B22241F0EDBDB000E299D /* BookViewController.swift */,
+				773B22221F0EDBCB000E299D /* AppDelegate.swift */,
 				77A2455819A721A400E977D8 /* Main_iPhone.storyboard */,
 				77A2455B19A721A400E977D8 /* Main_iPad.storyboard */,
-				77A2455E19A721A400E977D8 /* ACBookViewController.h */,
-				77A2455F19A721A400E977D8 /* ACBookViewController.m */,
-				773B22001F0D9AFB000E299D /* BookViewController.swift */,
 				77A2456119A721A400E977D8 /* ACPlayerViewController.h */,
 				77A2456219A721A400E977D8 /* ACPlayerViewController.m */,
 				77A2458119A7273400E977D8 /* ACPartViewController.h */,
 				77A2458219A7273400E977D8 /* ACPartViewController.m */,
 				7797889219A8273100CCA8DE /* ACChapterViewController.h */,
 				7797889319A8273100CCA8DE /* ACChapterViewController.m */,
-				77A2458819A7324400E977D8 /* ACChapter.h */,
-				77A2458919A7324400E977D8 /* ACChapter.m */,
-				77A2458D19A73B4800E977D8 /* ACChapterGroup.h */,
-				77A2458E19A73B4800E977D8 /* ACChapterGroup.m */,
 				77A2456419A721A400E977D8 /* Images.xcassets */,
 				77A2454D19A721A400E977D8 /* Supporting Files */,
 			);
@@ -291,14 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77A2456019A721A400E977D8 /* ACBookViewController.m in Sources */,
-				77A2458A19A7324400E977D8 /* ACChapter.m in Sources */,
-				77A2458F19A73B4800E977D8 /* ACChapterGroup.m in Sources */,
-				773B21FF1F0D98EB000E299D /* AppDelegate.swift in Sources */,
 				77A2456319A721A400E977D8 /* ACPlayerViewController.m in Sources */,
-				773B22011F0D9AFB000E299D /* BookViewController.swift in Sources */,
+				773B22231F0EDBCB000E299D /* AppDelegate.swift in Sources */,
+				773B22251F0EDBDB000E299D /* BookViewController.swift in Sources */,
 				77A2458319A7273400E977D8 /* ACPartViewController.m in Sources */,
 				7797889419A8273100CCA8DE /* ACChapterViewController.m in Sources */,
+				773B222B1F0EDE02000E299D /* ChapterGroup.swift in Sources */,
+				773B22291F0EDD6F000E299D /* Chapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
