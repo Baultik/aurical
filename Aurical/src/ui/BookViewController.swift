@@ -11,7 +11,9 @@ import MediaPlayer
 import UIKit
 
 class BookViewController: UITableViewController {
-    private var bookCollection = [Any]()
+    private var bookCollection = [MPMediaItemCollection]()
+    private var imageLoadQueue = DispatchQueue(label: "ImageQueue")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,31 +25,34 @@ class BookViewController: UITableViewController {
         if let collection = query.collections {
             let queue = DispatchQueue(label: "CollectionQueue")
             queue.async {
+                
                 for  group in collection {
                     let book: MPMediaItem? = group.representativeItem
-                    let url: URL? = book?.value(forProperty: MPMediaItemPropertyAssetURL) as! URL
-                    let uasset = AVURLAsset(url:url!, options: nil)
-                    var AAC: Bool = false
-                    for track: AVAssetTrack in uasset.tracks {
-                        let formats: [Any] = track.formatDescriptions
-                        for i in 0..<formats.count {
-                            let format: CMFormatDescription? = (formats[i] as? CMFormatDescription)
-                            let mediaType: CMMediaType = CMFormatDescriptionGetMediaType(format!)
-                            let mediaSubType: FourCharCode = CMFormatDescriptionGetMediaSubType(format!)
-                            if mediaType == kCMMediaType_Audio {
-                                if mediaSubType == c {
-                                    AAC = true
+                    
+                    if let assetURL = book?.value(forProperty: MPMediaItemPropertyAssetURL) {
+                        let uasset = AVURLAsset(url:assetURL as! URL, options: nil)
+                        var AAC: Bool = false
+                        
+                        for track: AVAssetTrack in uasset.tracks {
+                            for format in track.formatDescriptions {
+                                let mediaType: CMMediaType = CMFormatDescriptionGetMediaType(format as! CMFormatDescription)
+                                let mediaSubType: FourCharCode = CMFormatDescriptionGetMediaSubType(format as! CMFormatDescription)
+                                
+                                if mediaType == kCMMediaType_Audio && mediaSubType == UInt32("aac "){
+                                        AAC = true
                                 }
                             }
                         }
                     }
+                    
+                    
                     if true {
-                        bookCollection.append(group)
+                        self.bookCollection.append(group)
                     }
                 }
 
                 DispatchQueue.main.async(execute: {() -> Void in
-                    tableView.reloadData()
+                    self.tableView.reloadData()
                 })
             }
         }
@@ -65,26 +70,23 @@ class BookViewController: UITableViewController {
         return bookCollection.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        let mediaItemCollection: MPMediaItemCollection? = bookCollection[indexPath.row] as! MPMediaItemCollection
+        let mediaItemCollection: MPMediaItemCollection? = bookCollection[indexPath.row] 
         let mediaItem: MPMediaItem? = mediaItemCollection?.representativeItem
-            let artist: String? = mediaItem?.value(forProperty: MPMediaItemPropertyAlbumArtist)
-            let title: String? = mediaItem?.value(forProperty: MPMediaItemPropertyTitle)
-            cell?.textLabel?.text = title
-            cell?.detailTextLabel?.text = artist
-            DispatchQueue.global(qos: .default).async(execute: {() -> Void in
-                let artwork: MPMediaItemArtwork? = mediaItem?.value(forProperty: MPMediaItemPropertyArtwork)
-                if artwork != nil {
-                    let image: UIImage? = artwork?.image(withSize: cell?.imageView?.bounds?.size)
-                    DispatchQueue.main.async(execute: {() -> Void in
-                        cell?.imageView?.image = image
-                        cell?.setNeedsLayout()
-                    })
-                }
-            })
-            return cell!
+
+            cell.textLabel?.text = mediaItem?.value(forProperty: MPMediaItemPropertyTitle) as? String
+            cell.detailTextLabel?.text = mediaItem?.value(forProperty: MPMediaItemPropertyAlbumArtist) as? String
+        
+        imageLoadQueue.async {
+            if let artwork:MPMediaItemArtwork = mediaItem?.value(forProperty: MPMediaItemPropertyArtwork) as? MPMediaItemArtwork {
+                
+                DispatchQueue.main.async(execute: {() -> Void in
+                    cell.imageView?.image = artwork.image(at: (cell.imageView?.bounds.size)!)
+                    cell.setNeedsLayout()
+                })
+            }
+        }
 
         return cell
     }
@@ -97,7 +99,9 @@ class BookViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowParts" {
-            tableView.indexPathForSelectedRow
+            //let index = self.tableView.indexPathForSelectedRow?.row
+            //let mediaItemCollection = bookCollection[index!]
+            
             
 //            segue.destination
             

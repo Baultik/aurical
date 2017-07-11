@@ -107,7 +107,7 @@ class ChapterGroup: NSObject {
             let group  = chapterGroup[i]
             let items = AVMetadataItem.metadataItems(from: group.items, withKey: "title", keySpace: nil)
             let item = items[0]
-            let chapter = Chapter()
+            var chapter = Chapter()
             chapter.title = item.stringValue
             chapter.time = item.time
             chapter.duration = item.duration

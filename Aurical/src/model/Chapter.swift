@@ -9,7 +9,7 @@
 import CoreMedia
 import Foundation
 
-class Chapter: NSObject {
+struct Chapter {
     var title: String?
     var time = CMTime()
     var duration = CMTime()
