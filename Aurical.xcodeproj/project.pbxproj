@@ -11,7 +11,8 @@
 		773B22251F0EDBDB000E299D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B22241F0EDBDB000E299D /* BookViewController.swift */; };
 		773B22291F0EDD6F000E299D /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B22281F0EDD6F000E299D /* Chapter.swift */; };
 		773B222B1F0EDE02000E299D /* ChapterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B222A1F0EDE02000E299D /* ChapterGroup.swift */; };
-		7797889419A8273100CCA8DE /* ACChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797889319A8273100CCA8DE /* ACChapterViewController.m */; };
+		7784F1F81F16B70700839331 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7784F1F71F16B70700839331 /* ChapterViewController.swift */; };
+		7784F1FA1F16BB1100839331 /* PartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7784F1F91F16BB1100839331 /* PartViewController.swift */; };
 		77A2454719A721A400E977D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2454619A721A400E977D8 /* Foundation.framework */; };
 		77A2454919A721A400E977D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2454819A721A400E977D8 /* CoreGraphics.framework */; };
 		77A2454B19A721A400E977D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2454A19A721A400E977D8 /* UIKit.framework */; };
@@ -46,8 +47,8 @@
 		773B22241F0EDBDB000E299D /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookViewController.swift; path = src/ui/BookViewController.swift; sourceTree = "<group>"; };
 		773B22281F0EDD6F000E299D /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chapter.swift; path = src/model/Chapter.swift; sourceTree = "<group>"; };
 		773B222A1F0EDE02000E299D /* ChapterGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChapterGroup.swift; path = src/model/ChapterGroup.swift; sourceTree = "<group>"; };
-		7797889219A8273100CCA8DE /* ACChapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACChapterViewController.h; sourceTree = "<group>"; };
-		7797889319A8273100CCA8DE /* ACChapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACChapterViewController.m; sourceTree = "<group>"; };
+		7784F1F71F16B70700839331 /* ChapterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChapterViewController.swift; path = src/ui/ChapterViewController.swift; sourceTree = "<group>"; };
+		7784F1F91F16BB1100839331 /* PartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartViewController.swift; path = src/ui/PartViewController.swift; sourceTree = "<group>"; };
 		77A2454319A721A400E977D8 /* Aurical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aurical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A2454619A721A400E977D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77A2454819A721A400E977D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -152,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				773B22261F0EDD46000E299D /* src */,
+				7784F1F71F16B70700839331 /* ChapterViewController.swift */,
+				7784F1F91F16BB1100839331 /* PartViewController.swift */,
 				773B22241F0EDBDB000E299D /* BookViewController.swift */,
 				773B22221F0EDBCB000E299D /* AppDelegate.swift */,
 				77A2455819A721A400E977D8 /* Main_iPhone.storyboard */,
@@ -160,8 +163,6 @@
 				77A2456219A721A400E977D8 /* ACPlayerViewController.m */,
 				77A2458119A7273400E977D8 /* ACPartViewController.h */,
 				77A2458219A7273400E977D8 /* ACPartViewController.m */,
-				7797889219A8273100CCA8DE /* ACChapterViewController.h */,
-				7797889319A8273100CCA8DE /* ACChapterViewController.m */,
 				77A2456419A721A400E977D8 /* Images.xcassets */,
 				77A2454D19A721A400E977D8 /* Supporting Files */,
 			);
@@ -299,10 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A2456319A721A400E977D8 /* ACPlayerViewController.m in Sources */,
+				7784F1FA1F16BB1100839331 /* PartViewController.swift in Sources */,
 				773B22231F0EDBCB000E299D /* AppDelegate.swift in Sources */,
 				773B22251F0EDBDB000E299D /* BookViewController.swift in Sources */,
 				77A2458319A7273400E977D8 /* ACPartViewController.m in Sources */,
-				7797889419A8273100CCA8DE /* ACChapterViewController.m in Sources */,
+				7784F1F81F16B70700839331 /* ChapterViewController.swift in Sources */,
 				773B222B1F0EDE02000E299D /* ChapterGroup.swift in Sources */,
 				773B22291F0EDD6F000E299D /* Chapter.swift in Sources */,
 			);

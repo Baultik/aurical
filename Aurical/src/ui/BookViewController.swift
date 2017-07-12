@@ -12,7 +12,6 @@ import UIKit
 
 class BookViewController: UITableViewController {
     private var bookCollection = [MPMediaItemCollection]()
-    private var imageLoadQueue = DispatchQueue(label: "ImageQueue")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +22,7 @@ class BookViewController: UITableViewController {
         //self.detailViewController = (ACPlayerViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
         let query = MPMediaQuery.audiobooks()
         if let collection = query.collections {
-            let queue = DispatchQueue(label: "CollectionQueue")
-            queue.async {
-                
+            DispatchQueue.global().async {
                 for  group in collection {
                     let book: MPMediaItem? = group.representativeItem
                     
@@ -78,7 +75,7 @@ class BookViewController: UITableViewController {
             cell.textLabel?.text = mediaItem?.value(forProperty: MPMediaItemPropertyTitle) as? String
             cell.detailTextLabel?.text = mediaItem?.value(forProperty: MPMediaItemPropertyAlbumArtist) as? String
         
-        imageLoadQueue.async {
+        DispatchQueue.global().async {
             if let artwork:MPMediaItemArtwork = mediaItem?.value(forProperty: MPMediaItemPropertyArtwork) as? MPMediaItemArtwork {
                 
                 DispatchQueue.main.async(execute: {() -> Void in
