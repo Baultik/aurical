@@ -44,7 +44,7 @@ class ChapterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
         var chapter = chapterGroup?.chapter(indexPath.row)
-        cell.textLabel?.text = "\(chapterGroup.count). \(chapter?.title)"
+        cell.textLabel?.text = "\(chapterGroup?.count). \(chapter?.title)"
 
         return cell
     }
