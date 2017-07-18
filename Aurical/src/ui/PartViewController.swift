@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import AVKit
 
 class PartViewController: UITableViewController {
     var parts: MPMediaItemCollection?
@@ -58,6 +59,13 @@ class PartViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ShowPlayer") {
+            let row = tableView.indexPathForSelectedRow?.row
+            let item:MPMediaItem = parts!.items[row!]
+            let playerVC:AVPlayerViewController = segue.destination as! AVPlayerViewController
+            let url:NSURL = item.value(forProperty: MPMediaItemPropertyAssetURL) as! NSURL
+//            let uasset:AVURLAsset = AVURLAsset(url: url as URL)
+            playerVC.player = AVPlayer(playerItem: AVPlayerItem(url: url as URL))
+            
 //            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 //            MPMediaItem *mediaItem = self.parts.items[indexPath.row];
 //            ACPlayerViewController *player = segue.destinationViewController;

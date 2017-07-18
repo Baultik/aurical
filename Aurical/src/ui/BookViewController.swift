@@ -96,15 +96,10 @@ class BookViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowParts" {
-            //let index = self.tableView.indexPathForSelectedRow?.row
-            //let mediaItemCollection = bookCollection[index!]
-            
-            
-//            segue.destination
-            
-//            MPMediaItemCollection *mediaItemCollection = bookCollection[indexPath.row];
-//            ACPartViewController *part = segue.destinationViewController;
-//            part.parts = mediaItemCollection;
+            let index = self.tableView.indexPathForSelectedRow?.row
+            let mediaItemCollection = bookCollection[index!]
+            let part:PartViewController = segue.destination as! PartViewController
+            part.parts = mediaItemCollection
         }
     }
 }

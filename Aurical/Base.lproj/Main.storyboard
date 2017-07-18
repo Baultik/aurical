@@ -110,7 +110,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ah7-4n-0Wa" kind="push" identifier="ShowPlayer" id="VL5-H3-pYg"/>
+                                    <segue destination="q76-CY-obQ" kind="push" id="h6z-ge-TLF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="64"/>
+            <point key="canvasLocation" x="1380" y="-1084"/>
         </scene>
         <!--Chapter View Controller-->
         <scene sceneID="iqC-kb-BrX">
@@ -303,10 +303,12 @@
         <!--AV Player View Controller-->
         <scene sceneID="1SC-hM-hCA">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="q76-CY-obQ" sceneMemberID="viewController"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="q76-CY-obQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iQf-au-MjN"/>
+                </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0u9-72-4kK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2288" y="62"/>
+            <point key="canvasLocation" x="1407" y="64"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

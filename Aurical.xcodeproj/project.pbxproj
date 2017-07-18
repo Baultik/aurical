@@ -19,7 +19,6 @@
 		77A2454B19A721A400E977D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2454A19A721A400E977D8 /* UIKit.framework */; };
 		77A2455119A721A400E977D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A2454F19A721A400E977D8 /* InfoPlist.strings */; };
 		77A2455A19A721A400E977D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A2455819A721A400E977D8 /* Main.storyboard */; };
-		77A2456319A721A400E977D8 /* ACPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A2456219A721A400E977D8 /* ACPlayerViewController.m */; };
 		77A2456519A721A400E977D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A2456419A721A400E977D8 /* Images.xcassets */; };
 		77A2456C19A721A500E977D8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2456B19A721A500E977D8 /* XCTest.framework */; };
 		77A2456D19A721A500E977D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2454619A721A400E977D8 /* Foundation.framework */; };
@@ -56,8 +55,6 @@
 		77A2454E19A721A400E977D8 /* Aurical-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Aurical-Info.plist"; sourceTree = "<group>"; };
 		77A2455019A721A400E977D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77A2455919A721A400E977D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		77A2456119A721A400E977D8 /* ACPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPlayerViewController.h; sourceTree = "<group>"; };
-		77A2456219A721A400E977D8 /* ACPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPlayerViewController.m; sourceTree = "<group>"; };
 		77A2456419A721A400E977D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77A2456A19A721A500E977D8 /* AuricalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuricalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A2456B19A721A500E977D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -156,8 +153,6 @@
 				7784F1FB1F1807CD00839331 /* PlayerViewController.swift */,
 				773B22221F0EDBCB000E299D /* AppDelegate.swift */,
 				77A2455819A721A400E977D8 /* Main.storyboard */,
-				77A2456119A721A400E977D8 /* ACPlayerViewController.h */,
-				77A2456219A721A400E977D8 /* ACPlayerViewController.m */,
 				77A2456419A721A400E977D8 /* Images.xcassets */,
 				77A2454D19A721A400E977D8 /* Supporting Files */,
 			);
@@ -294,7 +289,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77A2456319A721A400E977D8 /* ACPlayerViewController.m in Sources */,
 				7784F1FC1F1807CD00839331 /* PlayerViewController.swift in Sources */,
 				7784F1FA1F16BB1100839331 /* PartViewController.swift in Sources */,
 				773B22231F0EDBCB000E299D /* AppDelegate.swift in Sources */,
